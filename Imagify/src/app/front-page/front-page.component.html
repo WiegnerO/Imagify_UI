@@ -1,0 +1,17 @@
+<div class="row">
+    <div *ngFor="let image of images">
+        <div class="padding">
+            <app-image [image]=image></app-image> <br>
+            <button (click)="similarImages(image)">See similar images</button>
+        </div>
+    </div>
+</div>
+<hr>
+<h3 *ngIf="currentImage">These are the images with characteristics in common with : {{currentImage}}</h3>
+<div class="row">
+    <div *ngFor="let image of inCommonImages">
+        <div class="padding">
+            <app-image [image]=image></app-image>
+        </div>
+    </div>
+</div>

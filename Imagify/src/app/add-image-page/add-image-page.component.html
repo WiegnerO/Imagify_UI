@@ -1,0 +1,34 @@
+<form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Image Name : </label>
+        <input class="form-control" type="text" formControlName="image_name"/> 
+        <br>
+        <label for="exampleFormControlFile1">Image : </label>
+        <input type="file" class="form-control-file" name="image">
+        <br>
+        <label>Poster Name : </label>
+        <input class="form-control" type="text" formControlName="image_poster"/>
+        <br>
+        <label>Image Price : </label>
+        <input class="form-control" type="number" formControlName="price"/>
+        <br>
+        <div>
+            <label>Number of Characteristics</label>
+            <select class="form-control" formControlName="numberOfCharacteristics" (change)="onChangeCharacteristics($event)">
+                <option value=""></option>
+                <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">{{i}}</option>
+            </select>
+        </div>
+        <div *ngFor="let characteristic of imagesCharacteristicsFormArray.controls; let i = index">
+                <div [formGroup]="characteristic">
+                    <div>
+                        <label>Characteristic {{i + 1}} : </label>
+                        <input class="form-control" type="text" formControlName="characteristicValue"/>
+                    </div>
+                </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary mr-1">Enter</button>
+        </div>
+    </div>
+</form>
