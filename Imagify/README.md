@@ -21,7 +21,7 @@ This page is a form letting allows users to post a new image and imputing inform
 3. Image Poster
 4. Image Characteristics
 
-### Search Characteristic
+### Search Characteristic  http://localhost:4200/characteristicPage
 This page allows users to view images of a specific characteristic through one of two ways:
 1.	The page displays all the different types of characteristics and users can select one of them and see which images have that specific characteristic
 2.	Users can search a characteristic and see the images have that specific characteristic
