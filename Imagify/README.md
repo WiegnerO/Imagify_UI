@@ -1,27 +1,27 @@
 # Imagify
+- This project is the front end application for the Imagify app.
+- This application is written using Angular10 framework and the Bootstrap library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+## How to use the application
+In the top navbar there are three pages to navigate to:
+1. Image Repository
+2. Add image
+3. Search Characteristic
+Each of these pages have different functions
 
-## Development server
+### Image Repository page
+This page allows users to:
+1.  view all the images in the repository
+2.  select a specific image and see which images have characteristics in common with the selected one
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Add image page
+This page is a form letting allows users to post a new image and imputing information about the image such as:
+1. Image name
+2. Image Price
+3. Image Poster
+4. Image Characteristics
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Search Characteristic
+This page allows users to view images of a specific characteristic through one of two ways:
+1.	The page displays all the different types of characteristics and users can select one of them and see which images have that specific characteristic
+2.	Users can search a characteristic and see the images have that specific characteristic
