@@ -9,12 +9,12 @@ In the top navbar there are three pages to navigate to:
 3. Search Characteristic
 Each of these pages have different functions
 
-### Image Repository page
+### Image Repository page http://localhost:4200/homePage
 This page allows users to:
 1.  view all the images in the repository
-2.  select a specific image and see which images have characteristics in common with the selected one
+2.  select a specific image by clicking on the "see similar images" button underneath an image and see which other images have characteristics in common with it
 
-### Add image page
+### Add image page http://localhost:5000/api/images
 This page is a form letting allows users to post a new image and imputing information about the image such as:
 1. Image name
 2. Image Price
