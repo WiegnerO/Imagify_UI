@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WebService } from '../services/web.service'
 
 @Component({
@@ -11,6 +12,7 @@ export class FrontPageComponent implements OnInit {
   images : any[] = [];
   inCommonImages : any[] = [];
   currentImage : string = null;
+
 
   constructor(private webSevice : WebService) { }
 
@@ -27,6 +29,11 @@ export class FrontPageComponent implements OnInit {
       .subscribe(res =>{
         this.inCommonImages = res;
       })
+  }
+
+  deleteImages(image){
+    this.webSevice.deleteImage(image.id);
+    window.location.reload();;
   }
 
 }

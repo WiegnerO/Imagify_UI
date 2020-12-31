@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { WebService } from '../services/web.service';
 
 @Component({
   selector: 'app-image',
@@ -9,9 +10,17 @@ export class ImageComponent implements OnInit {
 
   @Input() image;
 
-  constructor() { }
+  characteristics : any[] = [];
+
+  constructor(private webSevice : WebService) {
+   }
 
   ngOnInit(): void {
+    console.log(this.image)
+    this.webSevice.getImageCharacteristics(this.image.id)
+    .subscribe(res => {
+      this.characteristics = res
+    })
   }
 
 }

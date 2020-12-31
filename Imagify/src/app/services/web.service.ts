@@ -11,6 +11,10 @@ export class WebService {
     return this.http.get<any[]>(this.BASE_URL + '/search');
   }
 
+  deleteImage(image_id){
+    return this.http.delete<any>(this.BASE_URL + '/images/' + image_id ).toPromise();
+  }
+
   getCharacteristics(){
     return this.http.get<any[]>(this.BASE_URL + '/characteristic');
   }
@@ -20,13 +24,15 @@ export class WebService {
   }
 
   postImage(image) {
-    console.log(this.BASE_URL + '/images')
-    console.log(image)
     return this.http.post<any>(this.BASE_URL + '/images' , image ).toPromise();
   }
 
   getImageBasedOnImage(image){
     return this.http.post<any[]>(this.BASE_URL + '/search/advanced/', image);
+  }
+
+  getImageCharacteristics(image_id){
+    return this.http.get<any[]>(this.BASE_URL + '/characteristic/' + image_id);
   }
 
   constructor(private http: HttpClient) { }

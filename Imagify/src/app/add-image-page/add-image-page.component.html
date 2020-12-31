@@ -4,7 +4,7 @@
         <input class="form-control" type="text" formControlName="image_name"/> 
         <br>
         <label for="exampleFormControlFile1">Image : </label>
-        <input type="file" class="form-control-file" name="image">
+        <input type="file" name="file" id="file" class="form-control-file" accept="image/jpg, image/jpeg, image/png" (change)="upload($event)">
         <br>
         <label>Poster Name : </label>
         <input class="form-control" type="text" formControlName="image_poster"/>

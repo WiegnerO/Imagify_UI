@@ -15,8 +15,9 @@ Each of these pages have different functions
 
 ### Image Repository page http://localhost:4200/homePage
 This page allows users to:
-1.  view all the images in the repository
-2.  select a specific image by clicking on the "see similar images" button underneath an image and see which other images have characteristics in common with it
+1. view all the images in the repository
+2. select a specific image by clicking on the "see similar images" button underneath an image and see which other images have characteristics in common with it
+3. delete a specific image by clicking on the delet button underneath an image this will also delete its associated characteristics
 
 ### Add image page http://localhost:5000/api/images
 This page is a form letting allows users to post a new image and imputing information about the image such as:

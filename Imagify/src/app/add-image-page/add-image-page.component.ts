@@ -10,6 +10,8 @@ import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 export class AddImagePageComponent implements OnInit {
 
   imageForm: FormGroup;
+  
+  image_object: any;
 
   constructor(private webService : WebService, private formBuilder: FormBuilder) { }
 
@@ -19,6 +21,7 @@ export class AddImagePageComponent implements OnInit {
       characteristics: new FormArray([]),
       image_name : '',
       image_poster : '',
+      image_object : null,
       price: null
   });
   }
@@ -44,13 +47,12 @@ export class AddImagePageComponent implements OnInit {
   onSubmit() {
     let image = {
       "image_name": this.imageForm.controls["image_name"].value,
-      //"image_object": this.imageForm.controls["image_object"].value,
+      "image_object": this.image_object,
       "image_poster": this.imageForm.controls["image_poster"].value,
       "price": this.imageForm.controls["price"].value,
       "characteristics" : []
-  }
-
-
+    }
+    console.log(image.image_object)
     this.imagesCharacteristicsFormArray.value.forEach(element => {
       Object.keys(element).forEach(function(key) {
         if(key == "characteristicValue"){
@@ -62,4 +64,7 @@ export class AddImagePageComponent implements OnInit {
     this.webService.postImage(image)
   }
 
+  upload(event){
+    this.image_object = event.target.files[0];
+  }
 }
