@@ -2,6 +2,12 @@
 - This project is the front end application for the Imagify app.
 - This application is written using Angular10 framework and the Bootstrap library
 
+# Requirements
+node
+node -v12.x.x
+npm
+npm -v6.x.x
+
 # How to setup the frontend application
 1. Clone or donwload the repistory make sure your machine has node
 2. Open the app in a IDE and in the console type <b>yarn start</b> or <b>npm start</b>
